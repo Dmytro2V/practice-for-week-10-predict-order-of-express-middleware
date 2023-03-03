@@ -57,3 +57,14 @@ app.use((err, req, res, next) => {
 
 const port = 5000;
 app.listen(port, () => console.log('Server is listening on port', port));
+
+// Scenario #1 GET / prediction:
+// c:1 2 7th - // note: on error skips ordinary middles
+// res - message (from 7)stop on Error
+
+// Scenario 2 Scenario #2 GET /other-resource
+// console: first fifth sixth seventh // note use '/' also covers '/*' 
+// res - message (from sevrenth)
+
+// Scenario #3 GET /not-found 
+// c: 1,5, 7,, res: message
